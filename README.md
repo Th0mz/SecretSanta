@@ -1,7 +1,7 @@
 ### Secret Santa
 ___
 
-<br>
+
 This python script has three stages:
    
     1.) Starting a INET socket which hosts a website, with the purpose of getting the
