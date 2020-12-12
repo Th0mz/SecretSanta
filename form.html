@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Amigo Secreto</title>
+        <style type="text/css">
+            #main-header{
+                text-align: center;
+                text-decoration: underline;
+                letter-spacing: 0.2em;
+                word-spacing: 1em;
+
+                background-color: red;
+                color: white;
+                padding: 10px;
+                
+                font-family: Tahoma;
+                font-size: 17px;
+                font-weight: normal;
+                font-style: italic;
+            
+                margin: auto;
+            }
+
+            #container {
+                width: 95%;
+                margin: auto;
+            }
+
+            #form-container {
+                width: 60%;
+                margin: auto;
+            }
+
+            #general-form{
+                padding-top: 40px;
+            }
+
+            #form-group {
+                padding-bottom: 15px;
+            }
+
+            #form-group input[type="text"] {
+                padding: 5px;
+                width: 100%;
+            }
+
+            #button {
+
+                width: 40%;
+                margin: auto;
+            }
+
+            #button input[type="submit"] {                
+                
+                width: 100%;
+            }
+
+        </style>
+    <head>
+    <body>
+        <div id="container">
+            <header id="main-header">
+                <h1> AMIGO SECRETO </h1>
+            </header>
+
+            <div id ="form-container">
+                <form id="general-form">
+
+                    <div id="form-group">
+                        <label for="name">Nome: </label><br>
+                        <input type="text" id="name" name="name">
+                    </div>
+
+                    <div id="form-group">
+                        <label for="email">E-Mail: </label><br>
+                        <input type="text" id="email" name="email">
+                    </div>
+
+                    <div id="button">
+                        <input type="submit" value="Submeter">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
