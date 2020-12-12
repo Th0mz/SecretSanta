@@ -2,8 +2,18 @@ import Server
 from SendEmails import *
 
 def main():
-    # Create a new server instance
-    server = Server.Server(8000)
+    # Create a new server instance:
+    #  -> Can be created in two ways:
+    #     - Server.Server(8000) : that makes the socket ip your 
+    #       "Ethernet adapter VirtualBox Host-Only Network" ipv4
+    #       you can the machine that is hosting to this ip but
+    #       no other device can connect to it
+    #
+    #     - Server.Server(8000, "customMachineIp") : customMachineIp
+    #       can be whatever ipv4 your machine has but if u choose the
+    #       "Wireless LAN adapter Wi-Fi" ipv4 other devices in the same
+    #       network can connect to the website
+    server = Server.Server(8000, "192.168.1.76")
 
     # Start http server
     server.startServer()

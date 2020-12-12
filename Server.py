@@ -6,8 +6,8 @@ from Entities import *
 class Server:
 
     # Constructor
-    def __init__(self, port):
-        self.serverIp = gethostbyname(gethostname()) 
+    def __init__(self, port, serverIp=gethostbyname(gethostname())):
+        self.serverIp = serverIp 
         self.port = port
         
         # Create socket
