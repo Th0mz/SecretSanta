@@ -1,1 +1,11 @@
+#
+# IP where the server is going to be hosted, you can use:
+#   -> Your ipv4 for all devices on the same network to see
+#      and be able to connect to it
+#   -> Just "localhost" this way you are the server is hosted 
+#      locally, thus you are the only one that can see it
+#   -> Your ip, so any one on the web can access it (for this
+#      you will need to forward your IP address for the given port)
+#
 ServerIP:192.168.1.76
+Port:8000

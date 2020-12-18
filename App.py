@@ -20,7 +20,8 @@ def main():
     #       network can connect to the website
     
     getSettings("Settings.txt")
-    server = Server.Server(8000, settings["ServerIP"])
+    print(settings)
+    server = Server.Server(int(settings["Port"]), settings["ServerIP"])
 
     # Start http server
     server.startServer()
@@ -42,8 +43,15 @@ def getSettings(settingsFile):
     with open(settingsFile, "r") as fileRead:
         line = fileRead.readline()
         while len(line) != 0:
-            (settingId, info) = line.split(":")
-            settings[settingId] = info
+            # Check if line is not a comment
+            if line[0] != "#":
+                (settingId, info) = line.split(":")
+
+                # Remove \n
+                settingId = settingId.replace("\n", "")
+                info = info.replace("\n", "")
+
+                settings[settingId] = info
  
             line = fileRead.readline()
         
