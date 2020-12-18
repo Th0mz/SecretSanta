@@ -20,7 +20,6 @@ def main():
     #       network can connect to the website
     
     getSettings("Settings.txt")
-    print(settings)
     server = Server.Server(int(settings["Port"]), settings["ServerIP"])
 
     # Start http server
