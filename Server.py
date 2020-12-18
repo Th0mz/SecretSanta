@@ -92,7 +92,7 @@ class Server:
 
         def processHTML(htmlFile):                 
             """ Given a htmlFile process it into a string message"""
-            with open(htmlFile, "r") as html:
+            with open(htmlFile, "r", encoding="utf-8") as html:
                 messagePieces = html.readlines()
 
             message = ""
